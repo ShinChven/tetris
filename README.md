@@ -1,68 +1,47 @@
 # Tetris Game
 
-A modern, web-based Tetris game with special power-ups and features.
+**Start Playing:** [https://shinchven.github.io/tetris/](https://shinchven.github.io/tetris/)
 
-## Features
-
-- **Classic Tetris gameplay** with all 7 standard pieces (I, O, T, S, Z, J, L)
-- **Special power-ups**:
-  - **Bombs**: Clear a 4x4 area around current piece (earned by clearing 2+ lines at once)
-  - **Nukes**: Clear entire board (earned by clearing 4 lines at once - Tetris!)
-- **Scoring system** with cores (lines cleared) tracking
-- **Progressive difficulty** - speed increases every 10 lines cleared
-- **Save/Load game** functionality with localStorage
-- **Leaderboard** - tracks top 10 scores locally
-- **Next piece preview**
-- **Responsive design** with dark theme
+A classic Tetris game with a modern twist, featuring special abilities and a persistent leaderboard.
 
 ## How to Play
 
-1. Open `tetris.html` in your web browser
-2. Click "Start" to begin
-3. Use keyboard controls to play:
-   - **Arrow Keys**: Move and rotate pieces
-     - Left/Right: Move piece horizontally
-     - Down: Move piece down faster
-     - Up: Rotate piece clockwise
-   - **Spacebar**: Hard drop (instantly drop piece to bottom)
-   - **B**: Use bomb (if available)
-   - **N**: Use nuke (if available)
+-   **Start Game:** Click the "Start" button to begin.
+-   **Move Piece:** Use the `ArrowLeft` and `ArrowRight` keys to move the falling piece horizontally.
+-   **Rotate Piece:** Use the `ArrowUp` key to rotate the piece.
+-   **Soft Drop:** Use the `ArrowDown` key to speed up the piece's descent.
+-   **Hard Drop:** Press the `Space` bar to instantly drop the piece to the bottom.
+-   **Pause/Resume:** Click the "Pause" button or press the `P` key to pause or resume the game.
 
-## Game Controls
+## Features
 
-- **Start**: Begin a new game
-- **Pause**: Pause/resume current game
-- **Save**: Save current game state
-- **Load**: Load previously saved game
-- **Bomb**: Use bomb power-up to clear 4x4 area
-- **Nuke**: Use nuke power-up to clear entire board
+### Special Abilities
 
-## Scoring
+Earn points to unlock powerful abilities:
 
-- **Base score**: 100 points per line cleared × current level
-- **Bonus points**: 50 for bomb usage, 200 for nuke usage
-- **Cores**: Total lines cleared throughout the game
-- **Level progression**: Every 10 lines cleared increases level and speed
+-   **Bomb (50 points):** Press the `B` key or click the "Bomb" button to activate. The next piece will be a bomb that clears a 4x4 area upon landing.
+-   **Tank (500 points):** Press the `T` key or click the "Tank" button. Control a tank at the top of the screen with the arrow keys and press `Space` to fire, clearing three columns of blocks.
+-   **Nuke (1000 points):** Press the `N` key or click the "Nuke" button to clear the entire board instantly.
 
-## Power-ups
+### Scoring & Resources
 
-- **Bombs**: Earned by clearing 2 or more lines simultaneously
-- **Nukes**: Earned by clearing exactly 4 lines (Tetris)
+-   **Score:** Earn points by clearing lines. The higher the level, the more points you get per line.
+-   **Cores:** Earn one "Core" for each line cleared. This is a secondary resource.
 
-## Files
+### Leaderboard
 
-- `tetris.html` - Main game file with HTML structure and styling
-- `tetris.js` - Game logic and functionality
-- `README.md` - This documentation file
+The game features a local leaderboard that saves the top 10 scores. Compete against yourself to get the highest score!
 
-## Requirements
+### Save/Load Game
 
-- Modern web browser with JavaScript enabled
-- No additional dependencies required
+You can save your game progress at any time by clicking the "Save" button and load it later with the "Load" button.
 
-## Installation
+## Technical Details
 
-1. Download both `tetris.html` and `tetris.js` files
-2. Keep them in the same directory
-3. Open `tetris.html` in your web browser
-4. Enjoy playing!
+-   **Frontend:** Built with HTML, CSS, and vanilla JavaScript.
+-   **Graphics:** Rendered using the HTML5 Canvas API.
+-   **State Management:** Game state, including the leaderboard and saved games, is stored in the browser's `localStorage`.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
