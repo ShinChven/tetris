@@ -21,15 +21,20 @@
             gap: 20px;
             align-items: flex-start;
         }
-        .game-board {
-            border: 2px solid #fff;
-            background: #000;
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
-        .info-panel {
+        .right-column {
             display: flex;
             flex-direction: column;
             gap: 15px;
             min-width: 200px;
+        }
+        .game-board {
+            border: 2px solid #fff;
+            background: #000;
         }
         .info-box {
             background: #333;
@@ -114,9 +119,14 @@
 </head>
 <body>
     <div class="game-container">
-        <canvas id="gameCanvas" class="game-board" width="300" height="600"></canvas>
-
-        <div class="info-panel">
+        <div class="left-column">
+            <canvas id="gameCanvas" class="game-board" width="300" height="600"></canvas>
+            <div class="info-box">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/ShinChven/tetris" target="_blank" style="color: #4CAF50; text-decoration: none;">View on GitHub</a></p>
+            </div>
+        </div>
+        <div class="right-column">
             <div class="info-box">
                 <h3>Resource</h3>
                 <div class="score-display" id="score">0</div>
@@ -145,7 +155,6 @@
                     <p>B: Bomb, N: Nuke, T: Tank</p>
                 </div>
             </div>
-
             <div class="info-box">
                 <h3>Leaderboard</h3>
                 <table class="ladder-table" id="leaderboard">
